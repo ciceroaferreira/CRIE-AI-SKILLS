@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Catálogo de Skills · CRIE AI Skills</title>
+<meta name="description" content="33 skills e plugins do Claude verificados para pequenas empresas: o que fazem, como instalar e a revisão de segurança. 33 vetted Claude skills and plugins for small businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/catalogo-data.js"></script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="mark" aria-hidden="true">AI</span>CRIE AI Skills</a>
+    <nav class="nav" aria-label="Principal">
+      <span class="links">
+        <a href="./#onboarding">Onboarding</a>&nbsp;&nbsp;
+        <a href="./#skills"><span lang="pt">Nossas skills</span><span lang="en">Our skills</span></a>&nbsp;&nbsp;
+        <a href="./#instalar"><span lang="pt">Instalar</span><span lang="en">Install</span></a>
+      </span>
+      <span class="langbar" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap" style="grid-template-columns: minmax(0, 1fr)">
+    <div class="stack">
+      <span class="eyebrow" style="color: var(--citrus)"><span lang="pt">Catálogo curado</span><span lang="en">Curated catalog</span></span>
+      <h1><span lang="pt">33 skills que valem a pena, <span class="hl">verificadas</span>.</span><span lang="en">33 skills worth installing, <span class="hl">vetted</span>.</span></h1>
+      <p class="lede"><span lang="pt">Da Anthropic, de fabricantes como Intuit e Canva e de projetos bem avaliados no GitHub. Para cada uma: o que faz para o seu negócio, como instalar e o que encontramos ao ler o código.</span><span lang="en">From Anthropic, vendors like Intuit and Canva, and well-rated GitHub projects. For each one: what it does for your business, how to install it, and what we found reading its code.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap stack" style="gap: 22px">
+    <div class="rules">
+      <div class="rule"><h3><span lang="pt">Como escolhemos</span><span lang="en">How we chose</span></h3><p><span lang="pt">Projetos ativos, de mantenedores conhecidos e úteis para quem não programa. Lemos cada SKILL.md e cada script. Nada foi instalado durante a revisão.</span><span lang="en">Active projects from known maintainers, useful to non-developers. We read every SKILL.md and every script. Nothing was installed during the review.</span></p></div>
+      <div class="rule"><h3><span lang="pt">O que deixamos de fora</span><span lang="en">What we left out</span></h3><p><span lang="pt">Skills que enviam dados para serviços de terceiros com chave de API, apagam ou movem arquivos sozinhas, instalam programas, montam perfis de pessoas ou empurram e-mail frio e SMS em massa (riscos de CAN-SPAM e TCPA).</span><span lang="en">Skills that send data to third-party services with API keys, move or delete files on their own, install programs, build profiles of people, or push cold email and mass SMS (CAN-SPAM and TCPA risk).</span></p></div>
+    </div>
+
+    <div class="stack" style="gap: 12px">
+      <label for="busca" class="muted" style="font-size: 14px"><span lang="pt">Buscar</span><span lang="en">Search</span></label>
+      <input id="busca" class="search" type="search" autocomplete="off">
+      <div class="filters" id="filtros" role="group"></div>
+      <p class="muted" id="contagem" aria-live="polite" style="font-size: 14px"></p>
+    </div>
+    <div id="lista" class="cards"></div>
+    <p class="muted" style="font-size: 13px" id="verificado"></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap stack">
+    <h2><span lang="pt">Antes de instalar qualquer outra skill</span><span lang="en">Before installing any other skill</span></h2>
+    <div class="rules">
+      <div class="rule"><h3>1</h3><p><span lang="pt">Instale só de fonte conhecida. Nunca um .zip recebido em grupo de WhatsApp ou de link desconhecido.</span><span lang="en">Install only from known sources. Never a .zip from a group chat or an unknown link.</span></p></div>
+      <div class="rule"><h3>2</h3><p><span lang="pt">Abra o SKILL.md e leia o que ele manda o Claude fazer.</span><span lang="en">Open SKILL.md and read what it tells Claude to do.</span></p></div>
+      <div class="rule"><h3>3</h3><p><span lang="pt">Desconfie de scripts que enviam dados para a internet ou pedem senhas e chaves.</span><span lang="en">Be wary of scripts that send data to the internet or ask for passwords and keys.</span></p></div>
+      <div class="rule"><h3>4</h3><p><span lang="pt">Na dúvida, peça: "Leia esta skill e me diga se ela envia dados para fora ou executa algo perigoso."</span><span lang="en">When in doubt, ask: "Read this skill and tell me whether it sends data out or runs anything dangerous."</span></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span><span lang="pt">Material da palestra de IA do CRIE Orlando.</span><span lang="en">Materials from the CRIE Orlando AI talk.</span></span>
+    <span><a href="./"><span lang="pt">Voltar ao início</span><span lang="en">Back to home</span></a> · <a href="https://github.com/ciceroaferreira/CRIE-AI-SKILLS">GitHub</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var CATS = [
+    ["todas", "Todas", "All"], ["tudo", "Tudo em um", "All-in-one"], ["docs", "Documentos e escrita", "Documents & writing"],
+    ["marketing", "Marketing e design", "Marketing & design"], ["vendas", "Vendas e atendimento", "Sales & support"],
+    ["financas", "Finanças", "Finance"], ["juridico", "Jurídico", "Legal"], ["tech", "Para curiosos de tecnologia", "Tech-curious"]
+  ];
+  var filtro = "todas", termo = "";
+  function L() { return window.crieLang ? crieLang() : "pt"; }
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function fmtStars(n) { return n >= 1000 ? (Math.round(n / 100) / 10).toString().replace(".", L() === "en" ? "." : ",") + "k" : String(n); }
+  function filtros() {
+    var box = document.getElementById("filtros"); box.textContent = "";
+    box.setAttribute("aria-label", L() === "en" ? "Filter by area" : "Filtrar por área");
+    CATS.forEach(function (c) {
+      var b = el("button", null, L() === "en" ? c[2] : c[1]); b.type = "button"; b.setAttribute("aria-pressed", String(c[0] === filtro));
+      b.addEventListener("click", function () { filtro = c[0]; filtros(); render(); }); box.append(b);
+    });
+    document.getElementById("busca").placeholder = L() === "en" ? "e.g. invoices, SEO, contracts" : "ex.: faturas, SEO, contratos";
+  }
+  function render() {
+    var en = L() === "en", box = document.getElementById("lista"); box.textContent = "";
+    var itens = (window.CATALOGO ? CATALOGO.items : []).filter(function (s) {
+      if (filtro !== "todas" && s.cat !== filtro) return false;
+      if (!termo) return true;
+      var hay = [s.name, s.desc_en, s.desc_pt, s.for_whom_en, s.for_whom_pt, s.maintainer].join(" ").toLowerCase();
+      return hay.indexOf(termo) !== -1;
+    });
+    itens.forEach(function (s) {
+      var c = el("article", "cat-card"), head = el("div", "head");
+      head.append(el("span", "name", s.name));
+      var r = (s.safety && s.safety.rating) || "";
+      var badge = el("span", "badge" + (r === "safe" ? "" : " warn"), r === "safe" ? (en ? "Safe" : "Segura") : (en ? "Safe, with notes" : "Segura, com observações"));
+      head.append(badge); c.append(head);
+      c.append(el("p", null, en ? s.desc_en : s.desc_pt));
+      c.append(el("p", "muted", (en ? "For: " : "Para: ") + (en ? s.for_whom_en : s.for_whom_pt)));
+      var meta = el("div", "meta");
+      meta.append(el("span", null, "★ " + fmtStars(s.stars || 0)));
+      meta.append(el("span", null, (s.official ? "Anthropic" : (s.maintainer || "").split(" (")[0])));
+      if (s.license) meta.append(el("span", null, (en ? "License: " : "Licença: ") + s.license.split(" (")[0]));
+      if (s.last_commit) meta.append(el("span", null, (en ? "Updated " : "Atualizada em ") + s.last_commit));
+      c.append(meta);
+      var det = el("details"), sum = el("summary", null, en ? "How to install" : "Como instalar"); det.append(sum);
+      var ai = s.install_claude_ai || {};
+      det.append(el("p", null, (en ? "Claude app: " : "App do Claude: ") + (ai.supported ? (en ? "yes, upload the folder as .zip. " : "sim, envie a pasta como .zip. ") : (en ? "not as a single zip. " : "não como .zip avulso. ")) + (ai.notes || "")));
+      (s.install_claude_code || []).forEach(function (cmd) {
+        if (/^\//.test(cmd)) { var w = el("div", "cmd"); w.append(el("span", "t", cmd)); var b = el("button", "copy", en ? "Copy" : "Copiar"); b.type = "button"; w.append(b); det.append(w); }
+        else det.append(el("p", "muted", cmd));
+      });
+      if (s.requires) det.append(el("p", "muted", (en ? "Requires: " : "Requer: ") + s.requires));
+      c.append(det);
+      var sd = el("details"); sd.append(el("summary", null, en ? "Safety review" : "Revisão de segurança (em inglês)"));
+      sd.append(el("p", "muted", (s.safety && s.safety.notes) || ""));
+      c.append(sd);
+      var a = el("a", null, en ? "View on GitHub" : "Ver no GitHub"); a.href = s.url; a.rel = "noopener"; a.target = "_blank"; c.append(a);
+      box.append(c);
+    });
+    document.getElementById("contagem").textContent = itens.length + (en ? (itens.length === 1 ? " item" : " items") : (itens.length === 1 ? " item" : " itens"));
+    if (window.CATALOGO) document.getElementById("verificado").textContent = (en ? "Stars, licenses and update dates checked on " : "Estrelas, licenças e datas conferidas em ") + CATALOGO.verified_on + ".";
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("busca").addEventListener("input", function (e) { termo = e.target.value.trim().toLowerCase(); render(); });
+    filtros(); render();
+  });
+  document.addEventListener("langchange", function () { filtros(); render(); });
+})();
+</script>
+</body>
+</html>

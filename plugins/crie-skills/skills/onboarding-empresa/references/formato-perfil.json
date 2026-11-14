@@ -1,0 +1,62 @@
+{
+  "_comment": "Example profile for scripts/criar_estrutura.py. Canonical keys are the Portuguese ones below; English aliases also work (name, what_it_does, industry, entity_type, states, sales_tax, payment_methods, team, challenges, sensitivity_level, language, deliverables_language, extra_personas, custom_industry_md...). idioma = pt|en (folder language). idioma_entregas = en|pt|both. nivel_sensibilidade = standard|elevated|regulated (padrao|elevado|regulado also accepted). Never put customer data, SSNs, passwords or bank numbers here.",
+  "idioma": "en",
+  "idioma_entregas": "both",
+  "nome": "Oliveira Immigration Law, PLLC",
+  "o_que_faz": "Immigration law firm serving the Brazilian and Portuguese-speaking community: family petitions, adjustment of status, naturalization, asylum and removal defense.",
+  "setor": "legal",
+  "segmento": "Immigration law (family-based, naturalization, asylum, removal defense)",
+  "tipo_entidade": "PLLC taxed as an S-corp (confirm with CPA)",
+  "estados": "New Jersey (office in Newark); federal immigration practice nationwide",
+  "imposto_vendas": "Not applicable (legal services are not taxable in NJ — confirm with CPA)",
+  "formas_pagamento": "Card via LawPay, ACH, Zelle, checks; flat-fee payment plans",
+  "tempo_de_mercado": "7 years",
+  "localizacao": "Newark, NJ — in person, phone and video",
+  "porte": "2-10",
+  "cliente_ideal": "Brazilian families in NJ and NY seeking family-based green cards or naturalization; Portuguese-speaking clients who want an attorney who explains everything in their language.",
+  "canais_aquisicao": "Referrals from churches and community groups, Instagram in Portuguese, Google Business Profile, Brazilian radio",
+  "concorrentes_diferenciais": "Large immigration firms and 'notarios'; differentiator is a licensed attorney who speaks Portuguese, flat fees and clear updates.",
+  "ticket_e_cobranca": "Flat fees $1,500–$8,000 per case plus USCIS filing fees paid by the client; consultations $150",
+  "equipe": "1 attorney (owner), 2 paralegals (W-2), 1 receptionist (W-2), 1 freelance translator (1099)",
+  "ferramentas": "Docketwise, Microsoft 365, LawPay, QuickBooks Online, WhatsApp Business",
+  "papel_usuario": "Owner and managing attorney",
+  "rotina_usuario": [
+    "Review forms and evidence packets prepared by paralegals",
+    "Answer client questions by email and WhatsApp in Portuguese",
+    "Draft RFE responses and cover letters",
+    "Weekly deadline meeting (USCIS, EOIR hearings, RFEs)"
+  ],
+  "desafios": [
+    "Owner overloaded reviewing case files",
+    "Clients constantly asking for case status",
+    "Too much time translating and explaining documents"
+  ],
+  "objetivo_12_meses": "Grow flat-fee caseload 30% without hiring another attorney.",
+  "tom": "warm but professional; Portuguese with clients, English with agencies",
+  "nivel_sensibilidade": "regulated",
+  "dados_tratados": ["attorney-client privileged case files", "immigration status and history", "SSNs, A-Numbers, passports", "medical exams (I-693)", "children's data in family petitions"],
+  "politica_ia": "No formal policy yet; follow ABA Formal Opinion 512 and NJ guidance",
+  "areas": ["legal", "finance", "sales", "marketing", "it", "strategy"],
+  "data_onboarding": "2026-11-13",
+  "setor_personalizado_md": "",
+  "personas_extras": [
+    {
+      "codigo": "docketing",
+      "nome": "Lúcia",
+      "area": "Docketing & deadlines",
+      "chame_quando": "you need to organize USCIS/EOIR deadlines, RFE due dates, hearings or case status",
+      "entregas": ["Deadline calendar with internal due date 5 days before the real one", "Checklist for every new USCIS notice", "Weekly case status report"],
+      "conteudo_md": ""
+    }
+  ],
+  "playbooks": [
+    {
+      "arquivo": "client-status-update",
+      "titulo": "Case status update for the client",
+      "persona": "Lúcia — Docketing & deadlines",
+      "frequencia": "weekly",
+      "gatilho": "write the status update for client X",
+      "conteudo_md": "# Case status update for the client\n\n- **Owner persona:** Lúcia — Docketing & deadlines\n- **Frequency:** weekly\n- **Trigger:** \"write the status update for client X\"\n- **Sensitivity:** regulated — follow SECURITY.md\n\n## Inputs\n- Case export or notes from Docketwise (CSV/text)\n- Latest USCIS notice (text extracted from the PDF)\n\n## Steps\n1. Scan and pseudonymize (names, A-Numbers, receipt numbers become markers)\n2. Identify stage, last action, next deadline and what the client must send\n3. Write a plain-language update in Portuguese (and English if requested)\n4. List documents still missing\n5. Revert markers only in the final version\n\n## Deliverable\n- WhatsApp/email text in confidential/YYYY-MM-DD-status-<client>.txt, for attorney review\n\n## Quality checklist\n- [ ] Deadlines checked against the docket\n- [ ] No promise of outcome or processing time\n- [ ] Reviewed by the attorney\n\n## Lessons learned\n_(empty)_\n"
+    }
+  ]
+}

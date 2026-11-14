@@ -1,0 +1,18 @@
+{
+  "_how_to_use": "Save as confidential/rules.json (it contains people's names). Terms are lowercase; accents and punctuation are ignored ('AT&T' = 'at t'). They match whole words; end with * for a prefix (lumber* matches lumberyard); 'word #' means the word followed by a number. User rules run first, the first match wins. Category names: built-in English or Portuguese labels, keys (owner_draw, contractors, payroll, supplies, transfer, card_payment, loan_in, commissions, cust_deposits, chargebacks), or any new name.",
+  "_como_usar": "Salve em confidencial/regras.json (tem nomes de pessoas). Use 'despesas'/'receitas' ou 'expenses'/'income'. Termos em minúsculas, sem acento; casam por palavra inteira; * no fim casa prefixo.",
+  "expenses": [
+    ["owner_draw", ["zelle payment to ana souza", "transfer to personal"]],
+    ["contractors", ["maria souza", "rosana lima", "joao pedro silva"]],
+    ["payroll", ["carla mendes"]],
+    ["Supplies, materials and inventory", ["miami flour co", "sweet packaging"]],
+    ["Software and subscriptions", ["square appointments"]],
+    ["transfer", ["online transfer to chk 9921"]]
+  ],
+  "income": [
+    ["Catering and custom orders", ["catering", "encomenda"]],
+    ["Commercial cleaning contracts", ["blue hill property*"]],
+    ["cust_deposits", ["deposit for", "sinal bolo"]],
+    ["loan_in", ["zelle payment from ana souza"]]
+  ]
+}

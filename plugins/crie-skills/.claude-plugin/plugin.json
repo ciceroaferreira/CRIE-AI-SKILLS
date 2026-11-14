@@ -1,0 +1,8 @@
+{
+  "name": "crie-skills",
+  "description": "Seven skills that turn Claude into a team of specialists for US small businesses: onboarding-empresa, marca-da-empresa, precificacao, proposta-comercial, atendimento-clientes, calendario-conteudo, relatorio-mensal-gestao. Bilingual PT/EN.",
+  "version": "1.0.0",
+  "author": { "name": "Cicero Ferreira" },
+  "homepage": "https://github.com/ciceroaferreira/CRIE-AI-SKILLS",
+  "repository": "https://github.com/ciceroaferreira/CRIE-AI-SKILLS"
+}

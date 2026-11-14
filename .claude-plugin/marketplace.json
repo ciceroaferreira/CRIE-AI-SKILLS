@@ -1,0 +1,12 @@
+{
+  "name": "crie-ai-skills",
+  "description": "Claude skills for US small businesses, in Portuguese and English (CRIE Orlando AI talk).",
+  "owner": { "name": "Cicero Ferreira" },
+  "plugins": [
+    {
+      "name": "crie-skills",
+      "source": "./plugins/crie-skills",
+      "description": "Onboarding, brand, pricing, proposals, customer service, content calendar and monthly cash report for small businesses in the US."
+    }
+  ]
+}
