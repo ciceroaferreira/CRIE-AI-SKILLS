@@ -21,9 +21,9 @@ Sete skills do Claude para pequenas empresas nos EUA, criadas para a palestra de
 ## Como instalar
 
 **App do Claude (site, desktop ou Cowork)**
-1. Baixe [`docs/downloads/Pacote-CRIE-Skills.zip`](docs/downloads/Pacote-CRIE-Skills.zip) e descompacte. Dentro há um .zip por skill.
+1. Baixe [`docs/downloads/crie-skills.zip`](docs/downloads/crie-skills.zip). **Não descompacte.** As 7 skills estão dentro dele.
 2. No Claude: **Configurações → Capacidades**, ative **Execução de código e criação de arquivos**.
-3. Em **Skills**, clique em **Fazer upload** e envie cada .zip sem descompactar. Comece por `onboarding-empresa.zip`.
+3. Em **Skills**, clique em **Fazer upload** e envie o `crie-skills.zip`. É um upload só.
 4. Numa conversa nova: *"Quero fazer o onboarding da minha empresa."*
 
 **Claude Code**
@@ -59,7 +59,7 @@ Seven Claude skills for small businesses in the US, built for the CRIE Orlando A
 | `calendario-conteudo` | A month of posts with bilingual captions, the US retail calendar and industry ad rules. |
 | `relatorio-mensal-gestao` | Reads Chase, Bank of America, Wells Fargo, Capital One, Amex and other statements and shows where the money went. |
 
-**Install in the Claude app:** download [`docs/downloads/Pacote-CRIE-Skills.zip`](docs/downloads/Pacote-CRIE-Skills.zip), unzip it, then in Claude go to **Settings → Capabilities**, turn on **Code execution and file creation**, and under **Skills** upload each .zip (don't unzip them). Start with `onboarding-empresa.zip` and say *"I want to onboard my business."*
+**Install in the Claude app:** download [`docs/downloads/crie-skills.zip`](docs/downloads/crie-skills.zip) (don't unzip it; all 7 skills are inside), then in Claude go to **Settings → Capabilities**, turn on **Code execution and file creation**, and under **Skills** upload `crie-skills.zip`. That's one upload. Then open a new chat and say *"I want to onboard my business."*
 
 **Install in Claude Code:**
 ```
@@ -74,5 +74,10 @@ The skills give general US guidance and flag what varies by state. They don't re
 ```
 .claude-plugin/marketplace.json     Claude Code marketplace
 plugins/crie-skills/skills/         source of the 7 skills
+bundle/SKILL.md                     router that turns the 7 skills into one upload
+scripts/montar_pacote_unico.py      builds docs/downloads/crie-skills.zip
 docs/                               website (GitHub Pages) and downloads
 ```
+
+After changing any skill, rebuild the single-upload zip: `python3 scripts/montar_pacote_unico.py`.
+The per-skill zips and `Pacote-CRIE-Skills.zip` in `docs/downloads/` still work for anyone who wants only some skills.
